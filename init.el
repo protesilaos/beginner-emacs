@@ -140,6 +140,16 @@ package if it is missing."
 (put 'overwrite-mode 'disabled t)
 
 (setq initial-buffer-choice t)			; always start with *scratch*
+(setq save-interprogram-paste-before-kill t)
+
+(add-hook 'after-init-hook #'column-number-mode)
+
+(setq-default fill-column 72)
+(setq sentence-end-double-space t)
+(setq sentence-end-without-period nil)
+(setq colon-double-space nil)
+(setq use-hard-newlines nil)
+(setq adaptive-fill-mode t)
 
 ;; Disable some commands that will not help the users I have in mind and
 ;; map some useful commands to relevant keys.
