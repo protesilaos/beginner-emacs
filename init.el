@@ -192,6 +192,12 @@ package if it is missing."
 (beeb-builtin-package 'cus-edit
   (setq custom-file (make-temp-file "emacs-custom-")))
 
+;;;;; Auto-revert
+
+(beeb-builtin-package 'autorevert
+  (setq auto-revert-verbose t)
+  (add-hook 'after-init-hook #'global-auto-revert-mode))
+
 ;;;;; Modus themes (highly accessible and configurable themes)
 
 (require-theme 'modus-themes) ; Only needed for the Emacs28+ built-in version
