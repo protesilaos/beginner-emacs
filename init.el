@@ -370,9 +370,8 @@ package if it is missing."
   (minibuffer-depth-indicate-mode 1)
   (minibuffer-electric-default-mode 1)
 
-  (let ((map minibuffer-local-must-match-map))
-    ;; I use this prefix for other searches
-    (define-key map (kbd "M-s") nil)))
+  ;; I use this prefix for other searches
+  (define-key minibuffer-local-must-match-map (kbd "M-s") nil))
 
 (beeb-elpa-package 'vertico
   ;; Add prompt indicator to `completing-read-multiple'.
