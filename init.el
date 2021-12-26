@@ -125,7 +125,7 @@ package if it is missing."
        (add-to-list 'beeb-ensure-install ,package)
        (display-warning
         'beeb
-        (format "Run `beeb-install-ensured' to install all packages in `beeb-ensure-install'")
+        "Run `beeb-install-ensured' to install all packages in `beeb-ensure-install'"
         :warning))))
 
 ;;;; General settings
