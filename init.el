@@ -1125,4 +1125,18 @@ package if it is missing."
   (setq show-paren-when-point-inside-paren nil)
   (add-hook 'after-init-hook #'show-paren-mode))
 
-;; TODO 2021-12-25: Spelling
+;;;;;; Spell check
+
+(beeb-builtin-package 'ispell
+  (setq ispell-program-name "hunspell")
+  (setq ispell-dictionary "el_GR"))
+
+(beeb-builtin-package 'flyspell
+  (setq flyspell-issue-message-flag nil)
+  (setq flyspell-issue-welcome-flag nil)
+  (dolist (hook '(text-mode-hook message-mode-hook))
+    (add-hook hook #'flyspell-mode))
+  (define-key flyspell-mouse-map (kbd "<mouse-3>") #'flyspell-correct-word))
+
+;; TODO 2021-12-26: I should incorporate prot-spell.el but I must think
+;; of an easy way to do it.  Maybe bundle it with this file?
