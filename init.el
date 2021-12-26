@@ -24,28 +24,41 @@
 
 ;;; Commentary:
 
-;; NOTE 2021-12-25: This is experimental and far from finalised.  All I
-;; have done is move some code from my dotemacs and tweak a few things.
-;; There is no README yet, which will hopefully dissuade you from
-;; proceeding.
+
+;; NOTE 2021-12-26: This is experimental and far from finalised.  All I
+;; have done thus far is move some code from my dotemacs and tweak a few
+;; things.  There is no README or documentation yet, which will
+;; hopefully dissuade you from proceeding.  THIS IS NOT FOR GENERAL USE
+;; and is explicitly set up to not work out-of-the-box (such as by
+;; visiting this file and invoking `M-x eval-buffer').
+
 
 ;; This is the configuration file that provides a usable environment for
-;; beginners to Emacs who have no interest to learn all the
-;; idiosyncracies of Emacs but still want to benefit from some of its
+;; neighbours or friends of mine who are beginners to Emacs, can rely on
+;; my in-person support, and have no interest to learn all the
+;; idiosyncracies of Emacs though still want to benefit from some of its
 ;; advanced features.
 ;;
-;; I am setting this up as I need a basis for non-tech-savvy people like
-;; my neighbours.  While simplified, this setup is still based on my
-;; dotemacs: <https://protesilaos.com/emacs/dotemacs>.  It is not
-;; intended for general use as it is very opinionated and I will
-;; continue to adjust it to my evolving needs.
+;; This is not a generic "Emacs for newbies" setup.  I am setting it up
+;; as a standalone project because I need a basis for non-tech-savvy
+;; people in my milieu whom I intend to support in person.  While
+;; simplified, this setup is still based on my dotemacs and will always
+;; work as a respin of what I think makes sense in an Emacs setup
+;; (mutatis mutandis): <https://protesilaos.com/emacs/dotemacs>.
 ;;
 ;; To stress the fact that THIS IS NOT FOR GENERAL USE, I am not setting
-;; up `use-package' or MELPA.
+;; up `use-package' or MELPA and will never do so.  If my neighbours or
+;; friends ever reach a level of comfort with their setup where they
+;; feel like venturing deep into Emacsland, then I will urge them to
+;; start from scratch, learn how to configure Emacs on their own, and
+;; assume responsibility for their dotemacs.  Whatever the case, I will
+;; not be supporting an "Emacs for newbies" distro: this is not a
+;; counterpart of Spacemacs, Doom Emacs, or equivalent.
 ;;
 ;; The namespace we are using here for custom code is `beeb' which is an
-;; acronym for "BE for Emacs Beginners" or else "Beginners Enthused;
-;; Experts Beguiled".
+;; acronym for "'Beginner Emacs' for my Enterprising Buddies", "BE for
+;; Emacs Beginners", "Beginners Enthused; Experts Beguiled", and so on
+;; (yes, this is supposed to be silly---`be' would be incredibly dull).
 ;;
 ;; This file's sections make it possible to navigate it with the help of
 ;; `M-x outline-minor-mode'.
