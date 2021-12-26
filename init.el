@@ -131,6 +131,7 @@ package if it is missing."
 ;;;; General settings
 
 (setq frame-title-format '("%b"))
+(setenv "LANG" "el_GR.UTF-8") ; Remember that this is for my neighbours/friends
 (setq default-input-method "greek")
 (setq ring-bell-function 'ignore)
 
