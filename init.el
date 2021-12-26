@@ -393,7 +393,7 @@ package if it is missing."
   (setq history-length 10000)
   (setq history-delete-duplicates t)
   (setq savehist-save-minibuffer-history t)
-  (savehist-mode 1))
+  (add-hook 'after-init-hook #'savehist-mode))
 
 ;;;;;; Enhanced minibuffer commands (consult.el)
 
@@ -425,7 +425,7 @@ package if it is missing."
   (setq recentf-save-file (locate-user-emacs-file "recentf"))
   (setq recentf-max-saved-items 200)
   (setq recentf-exclude '(".gz" ".xz" ".zip" "/elpa/" "/ssh:" "/sudo:"))
-  (recentf-mode 1))
+  (add-hook 'after-init-hook #'recentf-mode))
 
 ;;;;;; Extended minibuffer actions and more (embark.el)
 
@@ -668,7 +668,7 @@ package if it is missing."
 ;;;;;; Window history (winner-mode)
 
 (beeb-builtin-package 'winner
-  (winner-mode 1)
+  (add-hook 'after-init-hook #'winner-mode)
   (let ((map global-map))
     (define-key map (kbd "C-x <right>") #'winner-redo)
     (define-key map (kbd "C-x <left>") #'winner-undo)))
@@ -1070,7 +1070,7 @@ package if it is missing."
   (setq make-pointer-invisible t)
   (setq mouse-wheel-progressive-speed t)
   (setq mouse-wheel-follow-mouse t)
-  (mouse-wheel-mode 1)
+  (add-hook 'after-init-hook #'mouse-wheel-mode)
   (define-key global-map (kbd "C-M-<mouse-3>") #'tear-off-window))
 
 ;;;;;; Scrolling behaviour
@@ -1083,7 +1083,7 @@ package if it is missing."
 ;;;;;; Delete selection
 
 (beeb-builtin-package 'delsel
-  (delete-selection-mode 1))
+  (add-hook 'after-init-hook #'delete-selection-mode))
 
 ;;;;;; Tooltips (tooltip-mode)
 
@@ -1096,7 +1096,7 @@ package if it is missing."
           (internal-border-width . 6)
           (border-width . 0)
           (no-special-glyphs . t)))
-  (tooltip-mode 1))
+  (add-hook 'after-init-hook #'tooltip-mode))
 
 ;;;;;; Record cursor position
 
@@ -1122,6 +1122,6 @@ package if it is missing."
   (setq show-paren-style 'parenthesis)
   (setq show-paren-when-point-in-periphery nil)
   (setq show-paren-when-point-inside-paren nil)
-  (show-paren-mode 1))
+  (add-hook 'after-init-hook #'show-paren-mode))
 
 ;; TODO 2021-12-25: Spelling
