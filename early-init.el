@@ -56,7 +56,7 @@
 (setq use-dialog-box t)                 ; only for mouse events
 (setq use-file-dialog t)
 
-(setq inhibit-startup-echo-area-message (user-login-name)) ; read the docstring
+(setq inhibit-startup-echo-area-message user-login-name) ; read the docstring
 (setq inhibit-startup-screen t)
 (setq inhibit-startup-buffer-menu t)
 
